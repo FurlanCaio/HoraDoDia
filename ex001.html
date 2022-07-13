@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hora do Dia</title>
+</head>
+<body id="body">
+    <h1>Hora do Dia</h1>
+
+    <section>
+    <div id="res">
+        
+    </div>
+
+    <div id="img">
+
+    </div>
+</section>
+<p id="ig">@furlan.code</p>
+
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var res = document.getElementById('res')
+        var img = document.getElementById('img')
+        var body = document.getElementById('body')
+        var ig = document.getElementById('ig')
+        if (hora >= 6 && hora < 12) {
+            res.innerText = `Agora são ${hora} horas.`
+            img.innerHTML = "<img src='dia.png' alt='' width='200px' height='200px'>"
+        }
+        else if (hora >= 12 && hora <= 18) {
+            res.innerText = `Agora são ${hora} horas.`
+            img.innerHTML = "<img src='tarde.png' alt='' width='200px' height='200px'>"
+            body.style.background = 'brown'
+            
+        }
+
+        else {
+            res.innerHTML = `Agora são ${hora} horas.`
+            img.innerHTML = "<img src='noite.png' alt='' width='220px' height='220px'>"
+            body.style.background = 'black'
+            ig.style.color = 'white'
+        }
+    </script>
+
+
+    
+</body>
+</html>
